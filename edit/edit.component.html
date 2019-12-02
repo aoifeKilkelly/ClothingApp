@@ -1,0 +1,37 @@
+<mat-card>
+    <form (submit)="onEditClothing(clothingForm)" #clothingForm="ngForm">
+      <mat-form-field>
+          <label> Clothing Type</label>
+        <input
+          matInput
+          type="text"
+          name="type"
+          ngModel={{clothing.type}}
+          required
+          #title="ngModel">
+      </mat-form-field>
+      <mat-form-field>
+          <label>Clothing Size</label>
+        <textarea
+          matInput
+          name="size"
+          ngModel={{clothing.size}}
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+          <label>Clothing Color</label>
+        <textarea
+          matInput
+         rows="4"
+          name="color"
+          ngModel={{clothing.color}}
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="accent"
+        type="submit">Edit Clothing</button>
+    </form>
+  </mat-card>
